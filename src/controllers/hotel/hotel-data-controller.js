@@ -23,5 +23,23 @@ module.exports = {
       } catch (err) {
         return err.message
       }
+    },
+
+  getHotelById: async(req, res) => {
+    try{
+      var filter = data.find(element => element.id == req.params.id);
+      if(filter){
+        res.json(filter)
+      }else
+      {
+        res.send({status: "error"})
+      }
     }
+    catch(err){
+      return res.status(500).json({message: err.message})
+    }
+
+    console.log(filter)
+
+  }
 }
