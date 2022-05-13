@@ -1,4 +1,3 @@
-require('@babel/register');
 /* eslint-disable no-console */
 const chalk = require('chalk');
 const dotenv = require('dotenv');
