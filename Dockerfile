@@ -13,3 +13,9 @@ COPY . /app
 EXPOSE 3000
 
 CMD ["npm", "start" ]
+
+# Command for build Image
+# docker build .
+
+# Command for expose port per image
+# docker run -p 3000:3000 [image id]
