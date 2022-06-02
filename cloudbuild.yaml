@@ -16,7 +16,7 @@ steps:
         "run",
         "deploy",
         "nexthotel-backend",
-        "--region=southeast-asia2",
+        "--region=asia-southeast1",
         "--platfomr=managed",
         "image=gcr.io/exemplary-cycle-352007/nexthotel-backend:$SHORT_SHA",
       ]
