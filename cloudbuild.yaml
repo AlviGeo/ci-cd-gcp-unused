@@ -18,6 +18,5 @@ steps:
         "deploy",
         "nexthotel-backend",
         "--region=asia-southeast1",
-        "--platfomr=managed",
-        "image=gcr.io/exemplary-cycle-352007/nexthotel-backend:$COMMIT_SHA",
+        "--image=gcr.io/exemplary-cycle-352007/nexthotel-backend:$COMMIT_SHA",
       ]
