@@ -9,3 +9,14 @@ steps:
       ]
   - name: "gcr.io/cloud-builders/docker"
     args: ["push", "gcr.io/exemplary-cycle-352007/nexthotel-backend:$SHORT_SHA"]
+  - name: "gcr.io/cloud-builders/gcloud"
+    args:
+      [
+        "gcloud",
+        "run",
+        "deploy",
+        "nexthotel-backend",
+        "--region=southeast-asia2",
+        "--platfomr=managed",
+        "image=gcr.io/exemplary-cycle-352007/nexthotel-backend:$SHORT_SHA",
+      ]
