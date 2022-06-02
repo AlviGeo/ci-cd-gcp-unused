@@ -4,11 +4,12 @@ steps:
       [
         "build",
         "-t",
-        "gcr.io/exemplary-cycle-352007/nexthotel-backend:$SHORT_SHA",
+        "gcr.io/exemplary-cycle-352007/nexthotel-backend:$COMMIT_SHA",
         ".",
       ]
   - name: "gcr.io/cloud-builders/docker"
-    args: ["push", "gcr.io/exemplary-cycle-352007/nexthotel-backend:$SHORT_SHA"]
+    args:
+      ["push", "gcr.io/exemplary-cycle-352007/nexthotel-backend:$COMMIT_SHA"]
   - name: "gcr.io/cloud-builders/gcloud"
     args:
       [
@@ -18,5 +19,5 @@ steps:
         "nexthotel-backend",
         "--region=asia-southeast1",
         "--platfomr=managed",
-        "image=gcr.io/exemplary-cycle-352007/nexthotel-backend:$SHORT_SHA",
+        "image=gcr.io/exemplary-cycle-352007/nexthotel-backend:$COMMIT_SHA",
       ]
