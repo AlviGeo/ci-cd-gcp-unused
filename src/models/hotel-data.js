@@ -9,7 +9,7 @@ const data = [
       "An 11-minute walk from Sudirman train station, this ritzy hotel is 2.1 km from the National Museum of Indonesia and 4 km from Istiqlal Mosque.",
     latitude: -6.2,
     longitude: 106.816666,
-    imageUrl: "https://https://source.unsplash.com/random/900×700/?hotel",
+    imageUrl: "https://source.unsplash.com/random/900×700/?hotel",
   },
 
   {
