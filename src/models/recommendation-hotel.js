@@ -16,7 +16,7 @@ const recommendationData = [
     namaHotel: "Four Seasons Resort Bali At Sayan",
     rating: "4.7",
     kota: "Bali",
-    priceRange: "",
+    priceRange: "Rp 199.999 - Rp 594.285",
     description:
       "Nestled in jungle beside the Ayung River, this luxury resort is 2 km from the Blanco Renaissance Museum, 7 km from the upscale shops of Ubud and 9 km from the ancient carvings of the Goa Gajah cave.",
     latitude: -6.2,
@@ -28,7 +28,7 @@ const recommendationData = [
     namaHotel: "Wapa di Ume Sidemen",
     rating: "4.7",
     kota: "Bali",
-    priceRange: "",
+    priceRange: "Rp 199.999 - Rp 594.285",
     description:
       "This boutique bolthole in the 'New Ubud' reclines in a rich sweep of rice paddies on the lower slopes of Mount Agung. Private pools star alongside a glorious two-tier infinity pool, and there's a superb spa and tempting restaurant, too. ",
     latitude: -6.2,
@@ -40,7 +40,7 @@ const recommendationData = [
     namaHotel: "Sheraton Belitung Resort",
     rating: "4.7",
     kota: "Bangka Belitung",
-    priceRange: "",
+    priceRange: "Rp 199.999 - Rp 594.285",
     description:
       "Stay near the beach and discover one of Indonesia's most beautiful destinations at Sheraton Belitung Resort. Nestled between pristine white silica beaches and sparkling turquoise waters on the untouched island of Belitung, our sophisticated hotel serves up a vision of paradise. Revive your spirit at our on-site gym, tranquil spa and fabulous outdoor infinity pool.",
     latitude: -6.2,
@@ -52,7 +52,7 @@ const recommendationData = [
     namaHotel: "The Sanchaya",
     rating: "4.7",
     kota: "Bintan Islands",
-    priceRange: "",
+    priceRange: "Rp 199.999 - Rp 594.285",
     description:
       "Among beachfront gardens, this grand, Colonial-style resort is 8 km from Bandar Bentan Telani Ferry Terminal and 10 km from the 18-hole Laguna Bintan Golf Club.",
     latitude: -6.2,
@@ -64,7 +64,7 @@ const recommendationData = [
     namaHotel: "Whiz Prime Hotel Hasanuddin Makasar",
     rating: "4.7",
     kota: "North Sulawesi",
-    priceRange: "",
+    priceRange: "Rp 199.999 - Rp 594.285",
     description:
       "Less than 1 km from Fort Rotterdam, this straightforward hotel with a quirky, contemporary exterior is a 4-minute walk from a bus stop and 2 km from Losari Beach.",
     latitude: -6.2,
@@ -76,7 +76,7 @@ const recommendationData = [
     namaHotel: "InterContinental Bandung Dago Pakar, an IHG Hotel",
     rating: "4.7",
     kota: "Bandung",
-    priceRange: "",
+    priceRange: "Rp 199.999 - Rp 594.285",
     description:
       "A 12-minute walk from Mountain View Golf Club, this upscale hotel on the outskirts of Bandung is 4 km from Djuanda Forest Park and 10 km from Bandung train station.",
     latitude: -6.2,
@@ -88,7 +88,7 @@ const recommendationData = [
     namaHotel: "The Edge",
     rating: "4.7",
     kota: "Bali",
-    priceRange: "",
+    priceRange: "Rp 199.999 - Rp 594.285",
     description:
       "On a clifftop with panoramic views of the Indian Ocean, this upscale resort is 7 km from Pura Luhur Uluwatu temple and 8 km from Garuda Wisnu Kencana Cultural Park.",
     latitude: -6.2,
@@ -100,7 +100,7 @@ const recommendationData = [
     namaHotel: "Bulgari Resort Bali",
     rating: "4.7",
     kota: "Bali",
-    priceRange: "",
+    priceRange: "Rp 199.999 - Rp 594.285",
     description:
       "Overlooking the Indian Ocean, this posh cliff-top resort is 6 km from the Pura Luhur Uluwatu temple and 9 km from the Garuda Wisnu Kencana Cultural Park.",
     latitude: -6.2,
@@ -112,7 +112,7 @@ const recommendationData = [
     namaHotel: "Indra Maya Villas",
     rating: "4.7",
     kota: "Riau Islands",
-    priceRange: "",
+    priceRange: "Rp 199.999 - Rp 594.285",
     description:
       "Set in the 33-hectare Nirwana Gardens coastal resort, these airy, low-key villas are 4.7 km from Laguna Bintan Golf Club and 10 km from Bandar Bentan Telani Ferry Terminal.",
     latitude: -6.2,
@@ -124,7 +124,7 @@ const recommendationData = [
     namaHotel: "The Langham",
     rating: "4.7",
     kota: "Jakarta",
-    priceRange: "",
+    priceRange: "Rp 199.999 - Rp 594.285",
     description:
       "This swanky hotel in a sleek high-rise is a 14-minute walk from both Gelora Bung Karno Sports Complex and Senayan MRT station. It's 7 km from the National Museum of Indonesia.",
     latitude: -6.2,
@@ -136,7 +136,7 @@ const recommendationData = [
     namaHotel: "Taman Simalem Resort",
     rating: "4.7",
     kota: "North Sumatra",
-    priceRange: "",
+    priceRange: "Rp 199.999 - Rp 594.285",
     description:
       "Set on a cliff overlooking Lake Toba, this laid-back resort is 14 km from Sipisopiso, a dramatic waterfall, and 13 km from Sapo Juma Taman Bunga, a flower garden. It’s 135 km from Kualanamu International Airport.",
     latitude: -6.2,
@@ -148,7 +148,7 @@ const recommendationData = [
     namaHotel: "Loccal Collection Hotel",
     rating: "4.7",
     kota: "East Nusa Tenggara",
-    priceRange: "",
+    priceRange: "Rp 199.999 - Rp 594.285",
     description:
       "In whitewashed buildings set on a hillside, this chic hotel overlooking the Flores Sea is 2 km from the Bukit Cinta viewing point and 3 km from Komodo International Airport.",
     latitude: -6.2,
@@ -160,7 +160,7 @@ const recommendationData = [
     namaHotel: "Hotel Tentrem Yogyakarta",
     rating: "4.7",
     kota: "Yogyakarta",
-    priceRange: "",
+    priceRange: "Rp 199.999 - Rp 594.285",
     description:
       "Among shops and restaurants, this lavish hotel is 2.9 km from the markets on buzzy Jalan Malioboro, and 5 km from Keraton Ngayogyakarta Hadiningrat palace.",
     latitude: -6.2,
@@ -173,7 +173,7 @@ const recommendationData = [
     namaHotel: "Padma Hotel Bandung",
     rating: "4.7",
     kota: "Bandung",
-    priceRange: "",
+    priceRange: "Rp 199.999 - Rp 594.285",
     description:
       "Surrounded by lush greenery, this modern hotel is 4.1 km from Bandung Zoo, 6.7 km from the Museum Geologi featuring fossils and 8 km from upscale shopping at Braga Street.",
     latitude: -6.2,
