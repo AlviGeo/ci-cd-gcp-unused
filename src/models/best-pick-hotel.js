@@ -165,3 +165,5 @@ const bestPickdata = [
     imageUrl: "https://ik.imagekit.io/tvlk/apr-asset/dgXfoyh24ryQLRcGq00cIdKHRmotrWLNlvG-TxlcLxGkiDwaUSggleJNPRgIHCX6/hotel/asset/20015898-f1f268d46855092c0f484dfd315828b3.jpeg?tr=q-40,c-at_max,w-1280,h-720&_src=imagekit",
   },
 ];
+
+module.exports = bestPickdata;

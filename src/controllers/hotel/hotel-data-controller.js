@@ -1,6 +1,8 @@
 const data = require("../../models/all-hotel-data");
+const recommendationData = require("../../models/recommendation-hotel");
+const bestPickData = require("../../models/best-pick-hotel");
 const _ = require("lodash")
-const dataForBestPick = _.shuffle(data)
+const dataForBestPick = _.shuffle(bestPickData)
 
 module.exports = {
   getAllHotels: async (req, res) => {
@@ -42,7 +44,7 @@ module.exports = {
       const limitReturn = req.query.limit || 15;
 
       // If empty
-      if (data.length < 1) {
+      if (recommendationData.length < 1) {
         return res.status(404).json({
           status: "error",
           message: "Hotel Not Found!",
@@ -50,13 +52,13 @@ module.exports = {
       }
       // Check filter by hotel name
       if (filterByName) {
-        var filter = data.filter((hotel) =>
+        var filter = recommendationData.filter((hotel) =>
           hotel.namaHotel.toLowerCase().includes(filterByName.toLowerCase())
         );
         filter = filter.slice(0, limitReturn);
       }
 
-      const result = filter || data.slice(0, limitReturn)
+      const result = filter || recommendationData.slice(0, limitReturn)
       const shuffle = _.shuffle(result) 
 
       // Return data

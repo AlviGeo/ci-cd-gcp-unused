@@ -181,3 +181,5 @@ const recommendationData = [
     imageUrl: "https://www.indoplaces.com/foto/hotel/padma-hotel-bandung.jpg",
   },
 ];
+
+module.exports = recommendationData;
