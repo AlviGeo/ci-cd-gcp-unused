@@ -1,4 +1,4 @@
-const data = require("../../models/hotel-data");
+const data = require("../../models/all-hotel-data");
 const _ = require("lodash")
 const dataForBestPick = _.shuffle(data)
 
