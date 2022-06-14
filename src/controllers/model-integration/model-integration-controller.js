@@ -8,7 +8,7 @@ const api = apiAdapter(URL_SERVICE_FLASK);
 module.exports = {
   getAllFlaskHotels: async (req, res) => {
     try {
-      const hotel = await api.get("api/list-hotel", req.body);
+      const hotel = await api.get("api/list-hotel");
       const data = hotel.data.data;
       //   console.log(data);
       //   Define Variable Filter
@@ -44,5 +44,27 @@ module.exports = {
       }
       return err.message;
     }
+  },
+  getFlaskHotelById: async (req, res) => {
+    try {
+      const hotel = await api.get("api/list-hotel");
+      const data = hotel.data.data;
+
+      const filter = data.find((element) => element.id == req.params.id);
+      if (filter) {
+        // Return data
+        return res.json({
+          status: "success",
+          message: "Successfully retrieved!",
+          data: filter,
+        });
+      } else {
+        res.send({ status: "error" });
+      }
+    } catch (err) {
+      return res.status(500).json({ message: err.message });
+    }
+
+    console.log(filter);
   },
 };

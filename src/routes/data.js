@@ -13,5 +13,6 @@ router.get(
 router.get("/hotel-data/:id", dataController.getHotelById);
 
 router.get("/list-hotels", dataflaskController.getAllFlaskHotels);
+router.get("/list-hotels/:id", dataflaskController.getFlaskHotelById);
 
 module.exports = router;
