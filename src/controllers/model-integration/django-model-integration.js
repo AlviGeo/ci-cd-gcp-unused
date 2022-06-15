@@ -1,16 +1,16 @@
 const apiAdapter = require("../apiAdapter");
 
 //Variable base url service category
-const { URL_SERVICE_FLASK } = process.env;
-const api = apiAdapter(URL_SERVICE_FLASK);
-
-
+const { URL_SERVICE_DJANGO } = process.env;
+const api = apiAdapter(URL_SERVICE_DJANGO);
 
 module.exports = {
-  getAllFlaskHotels: async (req, res) => {
-    try {
-      const hotel = await api.get("api/list-hotel");
-      const data = hotel.data.data;
+
+  getHotelBestPicks: async (req, res) => {
+    const hotel = await api.get("/");
+    const data = hotel.data.data;
+
+    try{
       //   console.log(data);
       //   Define Variable Filter
       const filterByName = req.query.name;
@@ -37,7 +37,7 @@ module.exports = {
         message: "Successfully retrieved!",
         data: filter || data.slice(0, limitReturn),
       });
-    } catch (err) {
+    } catch(err){
       if (err.code === "ECONNREFUSED") {
         return res
           .status(500)
@@ -46,24 +46,25 @@ module.exports = {
       return err.message;
     }
   },
-
-  getFlaskHotelById: async (req, res) => {
+  
+  getHotelBestPicksByID: async(req, res) => {
     try {
-      const hotel = await api.get("api/list-hotel");
-      const data = hotel.data.data;
-      const filter = data.find((element) => element.id == req.params.id);
-      if (filter) {
-        // Return data
-        return res.json({
-          status: "success",
-          message: "Successfully retrieved!",
-          data: filter,
-        });
-      } else {
-        res.send({ status: "error" });
-      }
+        const hotel = await api.get("/");
+        const data = hotel.data.data;
+
+        const filter = data.find((element) => element.id == req.params.id);
+        if (filter) {
+            // Return data
+            return res.json({
+            status: "success",
+            message: "Successfully retrieved!",
+            data: filter,
+            });
+        } else {
+            res.send({ status: "error" });
+        }
     } catch (err) {
-      return res.status(500).json({ message: err.message });
+        return res.status(500).json({ message: err.message });
     }
 
     console.log(filter);
