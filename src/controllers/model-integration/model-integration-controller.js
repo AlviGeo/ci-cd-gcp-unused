@@ -4,8 +4,6 @@ const apiAdapter = require("../apiAdapter");
 const { URL_SERVICE_FLASK } = process.env;
 const api = apiAdapter(URL_SERVICE_FLASK);
 
-
-
 module.exports = {
   getAllFlaskHotels: async (req, res) => {
     try {
@@ -60,12 +58,13 @@ module.exports = {
           data: filter,
         });
       } else {
-        res.send({ status: "error" });
+        res.status(404).json({
+          status: "error",
+          message: "data not found",
+        });
       }
     } catch (err) {
       return res.status(500).json({ message: err.message });
     }
-
-    console.log(filter);
-  }
+  },
 };
