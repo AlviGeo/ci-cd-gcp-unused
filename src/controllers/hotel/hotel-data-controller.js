@@ -58,14 +58,14 @@ module.exports = {
         filter = filter.slice(0, limitReturn);
       }
 
-      const result = filter || recommendationData.slice(0, limitReturn)
-      const shuffle = _.shuffle(result) 
+      const result = filter || data.slice(0, limitReturn);
+      const shuffle = _.shuffle(result);
 
       // Return data
       return res.json({
         status: "success",
         message: "Successfully retrieved!",
-        data: shuffle
+        data: shuffle,
       });
     } catch (err) {
       return err.message;
