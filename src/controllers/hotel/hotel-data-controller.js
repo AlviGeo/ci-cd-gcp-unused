@@ -1,6 +1,9 @@
-const data = require("../../models/hotel-data");
-const _ = require("lodash");
-const dataForBestPick = _.shuffle(data);
+const data = require("../../models/all-hotel-data");
+const recommendationData = require("../../models/recommendation-hotel");
+const bestPickData = require("../../models/best-pick-hotel");
+const surveyData = require("../../models/survey-form");
+const _ = require("lodash")
+const dataForBestPick = _.shuffle(bestPickData)
 
 module.exports = {
   getAllHotels: async (req, res) => {
@@ -42,7 +45,7 @@ module.exports = {
       const limitReturn = req.query.limit || 15;
 
       // If empty
-      if (data.length < 1) {
+      if (recommendationData.length < 1) {
         return res.status(404).json({
           status: "error",
           message: "Hotel Not Found!",
@@ -50,7 +53,7 @@ module.exports = {
       }
       // Check filter by hotel name
       if (filterByName) {
-        var filter = data.filter((hotel) =>
+        var filter = recommendationData.filter((hotel) =>
           hotel.namaHotel.toLowerCase().includes(filterByName.toLowerCase())
         );
         filter = filter.slice(0, limitReturn);
@@ -122,4 +125,27 @@ module.exports = {
       return res.status(500).json({ message: err.message });
     }
   },
+
+  getHotelSurveyForm: async (req, res) => {
+    try {
+       // If empty
+       if (surveyData.length < 1) {
+        return res.status(404).json({
+          status: "error",
+          message: "Hotel Not Found!",
+        });
+      }
+
+      // Return data
+      return res.json({
+        status: "success",
+        message: "Successfully retrieved!",
+        data: surveyData
+      });
+    } catch (err) {
+      return res.status(500).json({ message: err.message });
+    }
+  },
+
+
 };
