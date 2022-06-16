@@ -115,12 +115,13 @@ module.exports = {
           data: filter,
         });
       } else {
-        res.send({ status: "error" });
+        res.status(404).json({
+          status: "error",
+          message: "data not found",
+        });
       }
     } catch (err) {
       return res.status(500).json({ message: err.message });
     }
-
-    console.log(filter);
   },
 };

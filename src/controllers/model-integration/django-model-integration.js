@@ -5,12 +5,11 @@ const { URL_SERVICE_DJANGO } = process.env;
 const api = apiAdapter(URL_SERVICE_DJANGO);
 
 module.exports = {
-
   getHotelBestPicks: async (req, res) => {
     const hotel = await api.get("/");
     const data = hotel.data.data;
 
-    try{
+    try {
       //   console.log(data);
       //   Define Variable Filter
       const filterByName = req.query.name;
@@ -37,7 +36,7 @@ module.exports = {
         message: "Successfully retrieved!",
         data: filter || data.slice(0, limitReturn),
       });
-    } catch(err){
+    } catch (err) {
       if (err.code === "ECONNREFUSED") {
         return res
           .status(500)
@@ -46,27 +45,28 @@ module.exports = {
       return err.message;
     }
   },
-  
-  getHotelBestPicksByID: async(req, res) => {
+
+  getHotelBestPicksByID: async (req, res) => {
     try {
-        const hotel = await api.get("/");
-        const data = hotel.data.data;
+      const hotel = await api.get("/");
+      const data = hotel.data.data;
 
-        const filter = data.find((element) => element.id == req.params.id);
-        if (filter) {
-            // Return data
-            return res.json({
-            status: "success",
-            message: "Successfully retrieved!",
-            data: filter,
-            });
-        } else {
-            res.send({ status: "error" });
-        }
+      const filter = data.find((element) => element.id == req.params.id);
+      if (filter) {
+        // Return data
+        return res.json({
+          status: "success",
+          message: "Successfully retrieved!",
+          data: filter,
+        });
+      } else {
+        res.status(404).json({
+          status: "error",
+          message: "data not found",
+        });
+      }
     } catch (err) {
-        return res.status(500).json({ message: err.message });
+      return res.status(500).json({ message: err.message });
     }
-
-    console.log(filter);
-  }
+  },
 };
