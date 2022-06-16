@@ -1,6 +1,7 @@
 const data = require("../../models/all-hotel-data");
 const recommendationData = require("../../models/recommendation-hotel");
 const bestPickData = require("../../models/best-pick-hotel");
+const surveyData = require("../../models/survey-form");
 const _ = require("lodash")
 const dataForBestPick = _.shuffle(bestPickData)
 
@@ -124,4 +125,27 @@ module.exports = {
       return res.status(500).json({ message: err.message });
     }
   },
+
+  getHotelSurveyForm: async (req, res) => {
+    try {
+       // If empty
+       if (surveyData.length < 1) {
+        return res.status(404).json({
+          status: "error",
+          message: "Hotel Not Found!",
+        });
+      }
+
+      // Return data
+      return res.json({
+        status: "success",
+        message: "Successfully retrieved!",
+        data: surveyData
+      });
+    } catch (err) {
+      return res.status(500).json({ message: err.message });
+    }
+  },
+
+
 };

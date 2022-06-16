@@ -7,4 +7,4 @@ module.exports = (baseUrl) => {
     baseURL: baseUrl,
     timeout: parseInt(TIMEOUT),
   });
-};z
+};
