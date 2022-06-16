@@ -20,8 +20,8 @@ module.exports = {
           return res.status(400).json({
             status: 'error',
             message: validate
-      });
-    }
+          });
+      }
       const hotel = await api.post("api/rekomendasi-hotel", req.body);
       const data = hotel.data.data;
 
