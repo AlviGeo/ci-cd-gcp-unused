@@ -33,3 +33,11 @@ npm install
 ```
 npm start
 ```
+
+# API Documentation
+
+```
+https://documenter.getpostman.com/view/12879966/Uz5JFuG1
+```
+
+
