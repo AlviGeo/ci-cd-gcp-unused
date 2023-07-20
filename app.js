@@ -21,7 +21,7 @@ app.use(bodyParser.json());
 app.use("/", dataRoutes);
 
 app.get("/", (req, res) => {
-  res.json({ message: "The server has started v1." });
+  res.json({ message: "The server has started." });
 });
 
 app.use(errorHandler);
